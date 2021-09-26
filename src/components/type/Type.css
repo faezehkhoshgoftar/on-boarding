@@ -1,0 +1,16 @@
+.Type {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20vh;
+    margin-bottom: 1%;
+}
+
+.Type-select {
+    border-radius: 15px;
+    background-color: rgb(12, 47, 122);
+    color: white;
+    margin-left: 10px;
+    height: 5vh;
+    text-align: center;
+}

@@ -1,0 +1,4 @@
+.CryptoCurrencies {
+    display: flex;
+    flex-wrap: wrap;
+}
