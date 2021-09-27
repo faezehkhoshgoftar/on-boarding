@@ -1,5 +1,4 @@
 import React from "react";
-import "./Type.css";
 
 const Type = ({ currencies, setType }) => {
   const uniqueItems = (x, i, array) => array.indexOf(x) === i;

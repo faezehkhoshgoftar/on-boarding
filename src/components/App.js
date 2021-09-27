@@ -1,6 +1,5 @@
-import "./App.css";
 //Import component
-import Main from "../main/Main";
+import Main from "./Main";
 
 function App() {
   return (

@@ -1,20 +1,19 @@
 import React from "react";
-import "./CryptoCurrency.css";
 //Import icon
 import { IoCheckmarkCircle } from "react-icons/io5";
 
-const CryptoCurrency = ({ item }) => {
+const CryptoCurrency = ({ data }) => {
   return (
     <article className="CryptoCurrency">
       <section className="CryptoCurrency-section-left">
-        <h3>Tether</h3>
+        <h3>{data.title}</h3>
         <p>USDT</p>
       </section>
       <section className="CryptoCurrency-section-right">
         <div>
           <p>Name</p>
           <h3>
-            {item.name}
+            {data.name}
             <span className="check-mark-container">
               <IoCheckmarkCircle className="check-mark" />
             </span>
@@ -22,15 +21,15 @@ const CryptoCurrency = ({ item }) => {
         </div>
         <div>
           <p>Value</p>
-          <h3>{item.value}</h3>
+          <h3>{data.value}</h3>
         </div>
         <div>
           <p>Unit</p>
-          <h3>{item.unit}</h3>
+          <h3>{data.unit}</h3>
         </div>
         <div>
           <p>Type</p>
-          <h3>{item.type}</h3>
+          <h3>{data.type}</h3>
         </div>
       </section>
     </article>
