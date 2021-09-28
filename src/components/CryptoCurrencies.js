@@ -7,17 +7,18 @@ const CryptoCurrencies = ({ currencies, typeCurrency }) => {
   const [cryptoList, setCryptoList] = useState([]);
 
   useEffect(() => {
-    let crypto = [];
+    let curenciesKey = [];
+
     for (const key in currencies) {
       if (Object.hasOwnProperty.call(currencies, key)) {
         const element = currencies[key];
         element["title"] = key;
-        crypto.push(element);
+        curenciesKey.push(element);
       }
     }
-    setCryptoList(crypto);
-    setShowList(crypto);
-  }, []);
+    setCryptoList(curenciesKey);
+    setShowList(curenciesKey);
+  }, [currencies]);
   useEffect(() => {
     let list = [];
     switch (typeCurrency) {
@@ -42,8 +43,10 @@ const CryptoCurrencies = ({ currencies, typeCurrency }) => {
         });
         setShowList(list);
         break;
+      default:
+        console.log("Type:All");
     }
-  }, [typeCurrency]);
+  }, [typeCurrency, cryptoList]);
 
   return (
     <div className="CryptoCurrencies">
